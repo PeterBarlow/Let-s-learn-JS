@@ -7,3 +7,21 @@ var products = [ { name: "Grapefruit", calories: 170, color: "red", sold: 8200 }
 				 { name: "Root Beer", calories: 200, color: "caramel", sold: 9909 },
 				 { name: "Water", calories: 0, color: "clear", sold: 62123 }
 ];
+
+function compareSold(colaA, colaB) {
+	return colaA - colaB;
+};
+
+products.sort(compareSold);
+
+function printProducts(products) {
+	for (var i = 0; i < products.length; i++) {
+		console.log("Name: " + products[i].name +
+			", Calories: " + products[i].calories +
+			", Color: " + products[i].color +
+			", Sold: " + products[i].sold);
+	}
+}
+
+products.sort(compareSold);
+printProducts(products);
