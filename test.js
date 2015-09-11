@@ -1,5 +1,30 @@
-administer(patient, function(dosage) {
-	if (dosage > 0) {
-		inject(dosage);
+var migrating = true;
+
+if (migrating) {
+	quack(4);
+	fly(4);
+}
+
+var fly = function (num) {
+	var sound = "Flying";
+	function wingFlapper() {
+		console.log(sound);
 	}
-}, time);
+	for (var i = 0; i < num; i++) {
+		wingFlapper();
+	}
+};
+
+function quack(num) {
+	var sound = "Quack";
+	var quacker = function() {
+		console.log(sound);
+	};
+	for (i = 0; i < num; i++) {
+		quacker();
+	}
+}
+if (migrating) {
+	quack(4);
+	fly(4);
+}
